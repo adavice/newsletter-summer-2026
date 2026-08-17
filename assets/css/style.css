@@ -304,7 +304,7 @@ html.js .screen-wrap {
   position: absolute;
   width: 150px;
   height: 126px;
-  background: url("./assets/img/leaf-monstera.png") center/contain no-repeat;
+  background: url("img/leaf-monstera.png") center/contain no-repeat;
   filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.55)) brightness(0.94)
     saturate(1.05);
   pointer-events: none;
@@ -312,7 +312,7 @@ html.js .screen-wrap {
 .fernimg {
   position: absolute;
   pointer-events: none;
-  background: url("./assets/img/leaf-palm.png") center/contain no-repeat;
+  background: url("img/leaf-palm.png") center/contain no-repeat;
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4)) brightness(0.92);
 }
 .realleaf {
