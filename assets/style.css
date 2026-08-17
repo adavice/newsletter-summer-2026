@@ -162,7 +162,7 @@ html.js .screen-wrap {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/img/paper.png") center/cover no-repeat;
+  background: url("img/paper.png") center/cover no-repeat;
   opacity: 0.5;
   mix-blend-mode: multiply;
   clip-path: polygon(
@@ -1076,7 +1076,7 @@ input.chk[type="checkbox"]:checked::after {
 #s2 .letter .paper {
   position: absolute;
   inset: 0;
-  background: url("assets/img/paper.png") center/cover no-repeat,
+  background: url("img/paper.png") center/cover no-repeat,
     radial-gradient(
       ellipse at 50% 18%,
       #f0e2c0 0%,
