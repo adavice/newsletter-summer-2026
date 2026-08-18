@@ -309,6 +309,9 @@ html.js .screen-wrap {
     saturate(1.05);
   pointer-events: none;
 }
+.leafdeco.leaf-alt {
+  background-image: url("img/leaf-palm.png");
+}
 .fernimg {
   position: absolute;
   pointer-events: none;
@@ -328,17 +331,17 @@ html.js .screen-wrap {
     transform: var(--drift-base, rotate(0deg)) translate(0, 0);
   }
   50% {
-    transform: var(--drift-base, rotate(0deg)) translate(3px, -5px)
-      rotate(1.5deg);
+    transform: var(--drift-base, rotate(0deg)) translate(10px, -16px)
+      rotate(6deg);
   }
 }
 @keyframes compassSway {
   0%,
   100% {
-    transform: rotate(-3deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: rotate(3deg);
+    transform: rotate(10deg);
   }
 }
 @keyframes stampShimmer {
@@ -383,7 +386,7 @@ html.js .screen-wrap {
 #s2 .compass-rose svg,
 img.rose8,
 img.rose10 {
-  animation: compassSway 14s ease-in-out infinite;
+  animation: compassSway 9s ease-in-out infinite;
   transform-origin: 50% 50%;
 }
 .stampring {
@@ -457,10 +460,15 @@ img.rose10 {
   img.rose10,
   .stampring,
   #s7 .chk7 li,
-  #s8 .rstop {
+  #s8 .rstop,
+  #s1 .butterfly,
+  #s1 .butterfly .wing {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+  #s1 .butterfly {
+    display: none !important;
   }
 }
 
@@ -959,6 +967,45 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 19px;
   letter-spacing: 1.5px;
   color: #dcc48c;
+}
+#s1 .butterfly {
+  position: absolute;
+  left: -100px;
+  top: 830px;
+  width: 92px;
+  height: 65px;
+  z-index: 17;
+  pointer-events: none;
+  animation: butterflyFly 13s linear infinite;
+}
+#s1 .butterfly .wing {
+  transform-box: view-box;
+  transform-origin: 40px 28px;
+  animation: wingFlap 0.32s ease-in-out infinite alternate;
+}
+@keyframes wingFlap {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.4);
+  }
+}
+@keyframes butterflyFly {
+  0% {
+    transform: translate(0, 0) rotate(67deg);
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(1400px, -600px) rotate(67deg);
+    opacity: 0;
+  }
 }
 
 #s2 .screen {
