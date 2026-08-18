@@ -63,6 +63,7 @@ fitScreens();
 (function () {
     var selectors = [
         'h1',
+        'h5',
         '.title-welcome',
         '.title-tothe',
         '.title-adventure',
@@ -82,6 +83,7 @@ fitScreens();
         '#s5 .rstop',
         '#s6 .ann9 .arow',
         '#s6 .bd .mrow',
+        '#s6 .bd .wish',
         '#s6 .hol .hrow',
         '#s7 .lines'
     ];
