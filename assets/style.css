@@ -158,42 +158,6 @@ html.js .screen-wrap {
 .parch.torn {
   position: relative;
 }
-.parch.torn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("img/paper.png") center/cover no-repeat;
-  opacity: 0.5;
-  mix-blend-mode: multiply;
-  clip-path: polygon(
-    1.5% 1%,
-    12% 0%,
-    28% 1.4%,
-    46% 0.3%,
-    63% 1.5%,
-    80% 0.4%,
-    95% 1.6%,
-    99.4% 5%,
-    98.6% 20%,
-    99.8% 38%,
-    98.4% 55%,
-    99.7% 72%,
-    98% 88%,
-    95% 99%,
-    80% 97.8%,
-    62% 99.6%,
-    44% 98%,
-    26% 99.7%,
-    10% 98.2%,
-    1% 97%,
-    2% 82%,
-    0.5% 64%,
-    2.2% 46%,
-    0.6% 28%,
-    2% 12%
-  );
-  pointer-events: none;
-}
 .greenpanel {
   background: radial-gradient(
     ellipse at 50% 15%,
@@ -373,6 +337,35 @@ html.reveal-ready .reveal {
   animation: fadeUpIn 0.6s ease-out both;
 }
 
+/* scroll reveal: headings & titles */
+html.reveal-ready h1,
+html.reveal-ready .title-welcome,
+html.reveal-ready .title-tothe,
+html.reveal-ready .title-adventure,
+html.reveal-ready .sign-script,
+html.reveal-ready .sign-team,
+html.reveal-ready .await,
+html.reveal-ready .sub,
+html.reveal-ready .intro,
+html.reveal-ready .title {
+  opacity: 0;
+}
+h1.in-view,
+.title-welcome.in-view,
+.title-tothe.in-view,
+.title-adventure.in-view,
+.sign-script.in-view,
+.sign-team.in-view,
+.await.in-view,
+.sub.in-view,
+.intro.in-view,
+.title.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+.title-tothe.in-view { animation-delay: 0.08s; }
+.title-adventure.in-view { animation-delay: 0.16s; }
+.sign-team.in-view { animation-delay: 0.08s; }
+
 /* scroll reveal: cover TOC */
 html.reveal-ready #s1 .toc .item {
   opacity: 0;
@@ -402,83 +395,81 @@ html.reveal-ready #s2 .letter-body > * {
 #s2 .letter-body > *:nth-child(7) { animation-delay: 0.59s; }
 
 /* scroll reveal: vytachiv intro + know panel */
-html.reveal-ready #s6 .left .intro,
-html.reveal-ready #s6 .loc {
+html.reveal-ready #s3 .loc {
   opacity: 0;
 }
-#s6 .left .intro.in-view,
-#s6 .loc.in-view {
+#s3 .loc.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
-html.reveal-ready #s6 .know .k {
+html.reveal-ready #s3 .know .k {
   opacity: 0;
 }
-#s6 .know .k.in-view {
+#s3 .know .k.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
-#s6 .know .k:nth-child(1) { animation-delay: 0.05s; }
-#s6 .know .k:nth-child(2) { animation-delay: 0.14s; }
-#s6 .know .k:nth-child(3) { animation-delay: 0.23s; }
-#s6 .know .k:nth-child(4) { animation-delay: 0.32s; }
+#s3 .know .k:nth-child(1) { animation-delay: 0.05s; }
+#s3 .know .k:nth-child(2) { animation-delay: 0.14s; }
+#s3 .know .k:nth-child(3) { animation-delay: 0.23s; }
+#s3 .know .k:nth-child(4) { animation-delay: 0.32s; }
 
 /* scroll reveal: guide schedule + tips */
-html.reveal-ready #s7 .sched .it {
+html.reveal-ready #s4 .sched .it {
   opacity: 0;
 }
-#s7 .sched .it.in-view {
+#s4 .sched .it.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
-#s7 .sched .it:nth-child(1) { animation-delay: 0.05s; }
-#s7 .sched .it:nth-child(2) { animation-delay: 0.12s; }
-#s7 .sched .it:nth-child(3) { animation-delay: 0.19s; }
-#s7 .sched .it:nth-child(4) { animation-delay: 0.26s; }
-#s7 .sched .it:nth-child(5) { animation-delay: 0.33s; }
-#s7 .sched .it:nth-child(6) { animation-delay: 0.4s; }
-#s7 .sched .it:nth-child(7) { animation-delay: 0.47s; }
-#s7 .sched .it:nth-child(8) { animation-delay: 0.54s; }
-html.reveal-ready #s7 .tips .it {
+#s4 .sched .it:nth-child(1) { animation-delay: 0.05s; }
+#s4 .sched .it:nth-child(2) { animation-delay: 0.12s; }
+#s4 .sched .it:nth-child(3) { animation-delay: 0.19s; }
+#s4 .sched .it:nth-child(4) { animation-delay: 0.26s; }
+#s4 .sched .it:nth-child(5) { animation-delay: 0.33s; }
+#s4 .sched .it:nth-child(6) { animation-delay: 0.4s; }
+#s4 .sched .it:nth-child(7) { animation-delay: 0.47s; }
+#s4 .sched .it:nth-child(8) { animation-delay: 0.54s; }
+html.reveal-ready #s4 .tips .it {
   opacity: 0;
 }
-#s7 .tips .it.in-view {
+#s4 .tips .it.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
-#s7 .tips .it:nth-child(1) { animation-delay: 0.05s; }
-#s7 .tips .it:nth-child(2) { animation-delay: 0.14s; }
-#s7 .tips .it:nth-child(3) { animation-delay: 0.23s; }
-#s7 .tips .it:nth-child(4) { animation-delay: 0.32s; }
-#s7 .tips .it:nth-child(5) { animation-delay: 0.41s; }
+#s4 .tips .it:nth-child(1) { animation-delay: 0.05s; }
+#s4 .tips .it:nth-child(2) { animation-delay: 0.14s; }
+#s4 .tips .it:nth-child(3) { animation-delay: 0.23s; }
+#s4 .tips .it:nth-child(4) { animation-delay: 0.32s; }
+#s4 .tips .it:nth-child(5) { animation-delay: 0.41s; }
 
 /* scroll reveal: celebrations columns */
-html.reveal-ready #s9 .ann9 .arow,
-html.reveal-ready #s9 .bd .mrow,
-html.reveal-ready #s9 .hol .hrow {
+html.reveal-ready #s6 .ann9 .arow,
+html.reveal-ready #s6 .bd .mrow,
+html.reveal-ready #s6 .hol .hrow {
   opacity: 0;
 }
-#s9 .ann9 .arow.in-view,
-#s9 .bd .mrow.in-view,
-#s9 .hol .hrow.in-view {
+#s6 .ann9 .arow.in-view,
+#s6 .bd .mrow.in-view,
+#s6 .hol .hrow.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
-#s9 .ann9 .arow:nth-child(1) { animation-delay: 0.05s; }
-#s9 .ann9 .arow:nth-child(2) { animation-delay: 0.12s; }
-#s9 .ann9 .arow:nth-child(3) { animation-delay: 0.19s; }
-#s9 .ann9 .arow:nth-child(4) { animation-delay: 0.26s; }
-#s9 .ann9 .arow:nth-child(5) { animation-delay: 0.33s; }
-#s9 .ann9 .arow:nth-child(6) { animation-delay: 0.4s; }
-#s9 .ann9 .arow:nth-child(7) { animation-delay: 0.47s; }
-#s9 .bd .mrow:nth-child(1) { animation-delay: 0.05s; }
-#s9 .bd .mrow:nth-child(2) { animation-delay: 0.14s; }
-#s9 .bd .mrow:nth-child(3) { animation-delay: 0.23s; }
-#s9 .hol .hrow:nth-child(1) { animation-delay: 0.05s; }
-#s9 .hol .hrow:nth-child(2) { animation-delay: 0.14s; }
-#s9 .hol .hrow:nth-child(3) { animation-delay: 0.23s; }
-#s9 .hol .hrow:nth-child(4) { animation-delay: 0.32s; }
+#s6 .ann9 .arow:nth-child(1) { animation-delay: 0.05s; }
+#s6 .ann9 .arow:nth-child(2) { animation-delay: 0.12s; }
+#s6 .ann9 .arow:nth-child(3) { animation-delay: 0.19s; }
+#s6 .ann9 .arow:nth-child(4) { animation-delay: 0.26s; }
+#s6 .ann9 .arow:nth-child(5) { animation-delay: 0.33s; }
+#s6 .ann9 .arow:nth-child(6) { animation-delay: 0.4s; }
+#s6 .ann9 .arow:nth-child(7) { animation-delay: 0.47s; }
+#s6 .bd .mrow:nth-child(1) { animation-delay: 0.05s; }
+#s6 .bd .mrow:nth-child(2) { animation-delay: 0.14s; }
+#s6 .bd .mrow:nth-child(3) { animation-delay: 0.23s; }
+#s6 .hol .hrow:nth-child(1) { animation-delay: 0.05s; }
+#s6 .hol .hrow:nth-child(2) { animation-delay: 0.14s; }
+#s6 .hol .hrow:nth-child(3) { animation-delay: 0.23s; }
+#s6 .hol .hrow:nth-child(4) { animation-delay: 0.32s; }
 
 /* scroll reveal: finale closing lines */
-html.reveal-ready #s10 .lines {
+html.reveal-ready #s7 .lines {
   opacity: 0;
 }
-#s10 .lines.in-view {
+#s7 .lines.in-view {
   animation: fadeUpIn 0.7s ease-out both;
 }
 .leafdeco,
@@ -511,61 +502,61 @@ img.rose10 {
 .stampring:nth-of-type(even) {
   animation-delay: -3s;
 }
-html.reveal-ready #s7 .chk7 li {
+html.reveal-ready #s4 .chk7 li {
   opacity: 0;
 }
-#s7 .chk7 li.in-view {
+#s4 .chk7 li.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
-#s7 .chk7 li:nth-child(1) {
+#s4 .chk7 li:nth-child(1) {
   animation-delay: 0.05s;
 }
-#s7 .chk7 li:nth-child(2) {
+#s4 .chk7 li:nth-child(2) {
   animation-delay: 0.12s;
 }
-#s7 .chk7 li:nth-child(3) {
+#s4 .chk7 li:nth-child(3) {
   animation-delay: 0.19s;
 }
-#s7 .chk7 li:nth-child(4) {
+#s4 .chk7 li:nth-child(4) {
   animation-delay: 0.26s;
 }
-#s7 .chk7 li:nth-child(5) {
+#s4 .chk7 li:nth-child(5) {
   animation-delay: 0.33s;
 }
-#s7 .chk7 li:nth-child(6) {
+#s4 .chk7 li:nth-child(6) {
   animation-delay: 0.4s;
 }
-#s7 .chk7 li:nth-child(7) {
+#s4 .chk7 li:nth-child(7) {
   animation-delay: 0.47s;
 }
-html.reveal-ready #s8 .rstop {
+html.reveal-ready #s5 .rstop {
   opacity: 0;
 }
-#s8 .rstop.in-view {
+#s5 .rstop.in-view {
   animation: fadeUpIn 0.5s ease-out both;
 }
-#s8 .rstop:nth-child(1) {
+#s5 .rstop:nth-child(1) {
   animation-delay: 0.05s;
 }
-#s8 .rstop:nth-child(2) {
+#s5 .rstop:nth-child(2) {
   animation-delay: 0.14s;
 }
-#s8 .rstop:nth-child(3) {
+#s5 .rstop:nth-child(3) {
   animation-delay: 0.23s;
 }
-#s8 .rstop:nth-child(4) {
+#s5 .rstop:nth-child(4) {
   animation-delay: 0.32s;
 }
-#s8 .rstop:nth-child(5) {
+#s5 .rstop:nth-child(5) {
   animation-delay: 0.41s;
 }
-#s8 .rstop:nth-child(6) {
+#s5 .rstop:nth-child(6) {
   animation-delay: 0.5s;
 }
-#s8 .rstop:nth-child(7) {
+#s5 .rstop:nth-child(7) {
   animation-delay: 0.59s;
 }
-#s8 .rstop:nth-child(8) {
+#s5 .rstop:nth-child(8) {
   animation-delay: 0.68s;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -581,8 +572,8 @@ html.reveal-ready #s8 .rstop {
   img.rose8,
   img.rose10,
   .stampring,
-  #s7 .chk7 li,
-  #s8 .rstop,
+  #s4 .chk7 li,
+  #s5 .rstop,
   #s1 .butterfly,
   #s1 .butterfly .wing {
     animation: none !important;
@@ -1695,7 +1686,7 @@ input.chk[type="checkbox"]:checked::after {
   margin-top: 3px;
 }
 
-#s6 .screen {
+#s3 .screen {
   width: 1280px;
   height: 914px;
   background: radial-gradient(
@@ -1705,7 +1696,7 @@ input.chk[type="checkbox"]:checked::after {
     #0a130c 100%
   );
 }
-#s6 .hdr {
+#s3 .hdr {
   position: absolute;
   left: 0;
   right: 0;
@@ -1717,24 +1708,24 @@ input.chk[type="checkbox"]:checked::after {
   padding: 0 28px;
   z-index: 20;
 }
-#s6 .hdr .lb {
+#s3 .hdr .lb {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-#s6 .hdr .lion {
+#s3 .hdr .lion {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
-#s6 .hdr .lion img {
+#s3 .hdr .lion img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#s6 .hdr .bn {
+#s3 .hdr .bn {
   background: linear-gradient(180deg, #ead9b0, #d3ba85);
   padding: 7px 22px;
   clip-path: polygon(0 12%, 100% 0, 97% 100%, 2% 92%);
@@ -1745,7 +1736,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #20351f;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
 }
-#s6 .hdr .rt {
+#s3 .hdr .rt {
   text-align: right;
   font-family: "Bebas Neue", sans-serif;
   color: #e0bf74;
@@ -1755,7 +1746,7 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.6;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
-#s6 .left {
+#s3 .left {
   position: absolute;
   left: 26px;
   top: 85px;
@@ -1776,7 +1767,7 @@ input.chk[type="checkbox"]:checked::after {
     );
   background-blend-mode: soft-light;
 }
-#s6 .left::after {
+#s3 .left::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1789,23 +1780,23 @@ input.chk[type="checkbox"]:checked::after {
     radial-gradient(circle at 90% 8%, rgba(120, 90, 40, 0.22), transparent 26%),
     radial-gradient(circle at 85% 92%, rgba(110, 80, 35, 0.3), transparent 32%);
 }
-#s6 .left h1 {
+#s3 .left h1 {
   font-family: "Cinzel", serif;
   font-weight: 900;
   color: #28401f;
   line-height: 0.95;
 }
-#s6 .left h1 .a {
+#s3 .left h1 .a {
   font-size: 42px;
   letter-spacing: 2px;
   display: block;
 }
-#s6 .left h1 .b {
+#s3 .left h1 .b {
   font-size: 72px;
   letter-spacing: 2px;
   display: block;
 }
-#s6 .await {
+#s3 .await {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1816,25 +1807,25 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2.5px;
   color: #33532f;
 }
-#s6 .await::before,
-#s6 .await::after {
+#s3 .await::before,
+#s3 .await::after {
   content: "";
   flex: 0 0 46px;
   height: 2px;
   background: #33532f;
 }
-#s6 .left .intro {
+#s3 .left .intro {
   font-size: 18px;
   line-height: 1.62;
   color: #4a4438;
   max-width: 460px;
 }
-#s6 .loc {
+#s3 .loc {
   display: flex;
   gap: 10px;
   margin: 16px 0;
 }
-#s6 .loc svg {
+#s3 .loc svg {
   width: 22px;
   height: 22px;
   flex: 0 0 22px;
@@ -1843,37 +1834,37 @@ input.chk[type="checkbox"]:checked::after {
   stroke-width: 2;
   stroke-linecap: round;
 }
-#s6 .loc h5 {
+#s3 .loc h5 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 22px;
   letter-spacing: 1.5px;
   color: #2f2e28;
 }
-#s6 .loc p {
+#s3 .loc p {
   font-size: 18px;
   line-height: 1.55;
   color: #55503f;
   margin-top: 5px;
   max-width: 400px;
 }
-#s6 .prg h4 {
+#s3 .prg h4 {
   margin: 20px 0 10px;
 }
-#s6 .day {
+#s3 .day {
   display: flex;
   gap: 14px;
   border-bottom: 1px solid rgba(90, 70, 40, 0.35);
   padding: 6px 0;
 }
-#s6 .day .dl {
+#s3 .day .dl {
   width: 96px;
   flex: 0 0 96px;
   display: flex;
   gap: 8px;
   align-items: flex-start;
 }
-#s6 .day .dot {
+#s3 .day .dot {
   width: 34px;
   height: 34px;
   flex: 0 0 34px;
@@ -1884,7 +1875,7 @@ input.chk[type="checkbox"]:checked::after {
   align-items: center;
   justify-content: center;
 }
-#s6 .day .dot svg {
+#s3 .day .dot svg {
   width: 17px;
   height: 17px;
   stroke: #4a3c22;
@@ -1892,44 +1883,44 @@ input.chk[type="checkbox"]:checked::after {
   stroke-width: 1.8;
   stroke-linecap: round;
 }
-#s6 .day .dl b {
+#s3 .day .dl b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: #2f2e28;
   display: block;
 }
-#s6 .day .dl i {
+#s3 .day .dl i {
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
   font-size: 11.5px;
   letter-spacing: 1.5px;
   color: #6a5a3e;
 }
-#s6 .day .tt {
+#s3 .day .tt {
   flex: 1;
 }
-#s6 .day .tt .r {
+#s3 .day .tt .r {
   display: flex;
   gap: 12px;
   font-size: 13.1px;
   color: #3c382c;
   line-height: 1.7;
 }
-#s6 .day .tt .r b {
+#s3 .day .tt .r b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
   min-width: 40px;
   color: #55503f;
 }
-#s6 .right {
+#s3 .right {
   position: absolute;
   left: 566px;
   right: 26px;
   top: 85px;
   bottom: 66px;
 }
-#s6 .grid {
+#s3 .grid {
   position: absolute;
   inset: 0;
   display: grid;
@@ -1937,33 +1928,33 @@ input.chk[type="checkbox"]:checked::after {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1.5fr 1fr 1fr;
 }
-#s6 .cell {
+#s3 .cell {
   position: relative;
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   background: #20351c;
 }
-#s6 .cell img {
+#s3 .cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-#s6 .cell.wide {
+#s3 .cell.wide {
   grid-column: 1/4;
 }
-#s6 .lights {
+#s3 .lights {
   background: linear-gradient(180deg, #1c2618, #100f0c);
 }
-#s6 .lights svg,
-#s6 .feast svg {
+#s3 .lights svg,
+#s3 .feast svg {
   width: 100%;
   height: 100%;
 }
-#s6 .feast {
+#s3 .feast {
   background: linear-gradient(180deg, #2a2016, #17110b);
 }
-#s6 .tag6 {
+#s3 .tag6 {
   position: absolute;
   right: -16px;
   top: 210px;
@@ -1987,13 +1978,13 @@ input.chk[type="checkbox"]:checked::after {
   color: #4a3c22;
   line-height: 1.8;
 }
-#s6 .cell.know {
+#s3 .cell.know {
   grid-column: span 2;
   padding: 24px;
   color: #e6cd92;
   overflow: hidden;
 }
-#s6 .know h5 {
+#s3 .know h5 {
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
@@ -2002,18 +1993,18 @@ input.chk[type="checkbox"]:checked::after {
   color: #ecd79c;
   margin-bottom: 6px;
 }
-#s6 .know .row {
+#s3 .know .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 4px 14px;
 }
-#s6 .know .k {
+#s3 .know .k {
   display: flex;
   gap: 12px;
   align-items: center;
 }
-#s6 .know .k svg {
+#s3 .know .k svg {
   width: 24px;
   height: 24px;
   flex: 0 0 17px;
@@ -2023,17 +2014,17 @@ input.chk[type="checkbox"]:checked::after {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-#s6 .know .k i {
+#s3 .know .k i {
   font-size: 15px;
   color: #dcbb6d;
   flex: 0 0 17px;
 }
-#s6 .know .k p {
+#s3 .know .k p {
   font-size: 15px;
   line-height: 1.28;
   color: #d9c793;
 }
-#s6 .foot {
+#s3 .foot {
   position: absolute;
   left: 0;
   right: 0;
@@ -2051,13 +2042,13 @@ input.chk[type="checkbox"]:checked::after {
   background: linear-gradient(180deg, transparent, rgba(5, 10, 6, 0.85) 45%);
   z-index: 20;
 }
-#s6 .foot .n {
+#s3 .foot .n {
   font-size: 22px;
   font-weight: 700;
   color: var(--gold-bright);
   margin-right: 12px;
 }
-#s6 .rope6 {
+#s3 .rope6 {
   position: absolute;
   left: 6px;
   top: 80px;
@@ -2067,7 +2058,7 @@ input.chk[type="checkbox"]:checked::after {
   opacity: 0.85;
 }
 
-#s7 .screen {
+#s4 .screen {
   width: 1280px;
   height: 880px;
   background: url("img/paper.png") center/cover no-repeat,
@@ -2079,7 +2070,7 @@ input.chk[type="checkbox"]:checked::after {
     );
   background-blend-mode: soft-light;
 }
-#s7 .darkedge {
+#s4 .darkedge {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -2098,7 +2089,7 @@ input.chk[type="checkbox"]:checked::after {
       rgba(18, 28, 16, 0.95) 100%
     );
 }
-#s7 .stampbox {
+#s4 .stampbox {
   position: absolute;
   left: 60px;
   top: 34px;
@@ -2111,13 +2102,13 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2px;
   color: #5c4e2e;
 }
-#s7 .stampbox::after {
+#s4 .stampbox::after {
   content: "";
   position: absolute;
   inset: 3px;
   border: 1px dashed #6f5e38;
 }
-#s7 h1 {
+#s4 h1 {
   position: absolute;
   left: 60px;
   top: 85px;
@@ -2128,7 +2119,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #2d3a26;
   letter-spacing: 1px;
 }
-#s7 .sub {
+#s4 .sub {
   position: absolute;
   left: 62px;
   top: 170px;
@@ -2140,7 +2131,7 @@ input.chk[type="checkbox"]:checked::after {
   width: 430px;
   line-height: 1.6;
 }
-#s7 .bpsc {
+#s4 .bpsc {
   position: absolute;
   left: 750px;
   top: 56px;
@@ -2149,7 +2140,7 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 12.5px;
   transform: rotate(10deg);
 }
-#s7 .meta7 {
+#s4 .meta7 {
   position: absolute;
   right: 120px;
   top: 40px;
@@ -2161,7 +2152,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2px;
   line-height: 1.7;
 }
-#s7 .pg7 {
+#s4 .pg7 {
   position: absolute;
   right: 36px;
   top: 30px;
@@ -2174,29 +2165,29 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 11px;
   letter-spacing: 2px;
 }
-#s7 .pg7 b {
+#s4 .pg7 b {
   display: block;
   font-size: 22px;
 }
-#s7 .col1 {
+#s4 .col1 {
   position: absolute;
   left: 60px;
   top: 230px;
   width: 350px;
 }
-#s7 .col2 {
+#s4 .col2 {
   position: absolute;
   left: 466px;
   top: 200px;
   width: 320px;
 }
-#s7 .col3 {
+#s4 .col3 {
   position: absolute;
   right: 56px;
   top: 230px;
   width: 360px;
 }
-#s7 .factphoto {
+#s4 .factphoto {
   position: relative;
   margin-top: 26px;
   width: 360px;
@@ -2205,13 +2196,13 @@ input.chk[type="checkbox"]:checked::after {
   overflow: hidden;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32);
 }
-#s7 .factphoto img {
+#s4 .factphoto img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-#s7 .factphoto .fpcap {
+#s4 .factphoto .fpcap {
   position: absolute;
   left: 16px;
   bottom: 14px;
@@ -2222,25 +2213,25 @@ input.chk[type="checkbox"]:checked::after {
   color: #f2e6c4;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
-#s7 h3.rib {
+#s4 h3.rib {
   font-size: 18px;
   margin-bottom: 14px;
 }
-#s7 .sched .it {
+#s4 .sched .it {
   display: flex;
   gap: 12px;
   padding: 10px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.4);
   align-items: center;
 }
-#s7 .sched .it:last-child {
+#s4 .sched .it:last-child {
   border-bottom: none;
 }
-#s7 .sched .when {
+#s4 .sched .when {
   width: 86px;
   flex: 0 0 86px;
 }
-#s7 .sched .when i {
+#s4 .sched .when i {
   display: block;
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
@@ -2248,26 +2239,26 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 1.5px;
   color: #8a7a52;
 }
-#s7 .sched .when b {
+#s4 .sched .when b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #33322c;
 }
-#s7 .sched h6 {
+#s4 .sched h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
   color: #2d3a26;
 }
-#s7 .sched p {
+#s4 .sched p {
   font-size: 14px;
   color: #55503f;
   line-height: 1.4;
   margin-top: 6px;
 }
-#s7 .chk7 li {
+#s4 .chk7 li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2275,17 +2266,17 @@ input.chk[type="checkbox"]:checked::after {
   border-bottom: 1px solid rgba(90, 70, 40, 0.28);
   list-style: none;
 }
-#s7 .chk7 li:last-child {
+#s4 .chk7 li:last-child {
   border-bottom: none;
 }
-#s7 .chk7 .l {
+#s4 .chk7 .l {
   display: flex;
   gap: 16px;
   align-items: center;
   font-size: 14.5px;
   color: #3c382c;
 }
-#s7 .chk7 svg {
+#s4 .chk7 svg {
   width: 24px;
   height: 24px;
   stroke: #6f5e38;
@@ -2294,59 +2285,59 @@ input.chk[type="checkbox"]:checked::after {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-#s7 .chk7 i {
+#s4 .chk7 i {
   font-size: 20px;
   color: #6f5e38;
 }
-#s7 .tips .it,
-#s7 .facts .it {
+#s4 .tips .it,
+#s4 .facts .it {
   display: flex;
   gap: 20px;
   padding: 9px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.4);
 }
-#s7 .tips .it:last-child,
-#s7 .facts .it:last-child {
+#s4 .tips .it:last-child,
+#s4 .facts .it:last-child {
   border-bottom: none;
 }
-#s7 .tips h6 {
+#s4 .tips h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
   color: #2d3a26;
 }
-#s7 .tips p {
+#s4 .tips p {
   font-size: 14px;
   color: #55503f;
   line-height: 1.4;
   margin-top: 6px;
 }
-#s7 .panel {
+#s4 .panel {
   background: rgba(250, 244, 226, 0.72);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   padding: 16px 20px;
   position: relative;
 }
-#s7 .panel .tp {
+#s4 .panel .tp {
   position: absolute;
   left: 50%;
   top: -11px;
   transform: translateX(-50%) rotate(-2deg);
 }
-#s7 .pols {
+#s4 .pols {
   position: absolute;
   left: 452px;
   top: 585px;
   width: 360px;
   height: 290px;
 }
-#s7 .pol {
+#s4 .pol {
   position: absolute;
   width: 190px;
   height: 210px;
 }
-#s7 .compass7 {
+#s4 .compass7 {
   position: absolute;
   right: 5px;
   top: 330px;
@@ -2356,7 +2347,7 @@ input.chk[type="checkbox"]:checked::after {
   z-index: 8;
   filter: sepia(0.35);
 }
-#s7 .gpgm {
+#s4 .gpgm {
   position: absolute;
   right: 30px;
   bottom: 70px;
@@ -2365,7 +2356,7 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 12px;
   transform: rotate(-8deg);
 }
-#s7 .aw {
+#s4 .aw {
   position: absolute;
   left: 392px;
   bottom: 96px;
@@ -2374,7 +2365,7 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 12px;
   transform: rotate(9deg);
 }
-#s7 .vytstamp {
+#s4 .vytstamp {
   position: absolute;
   left: 34px;
   bottom: 80px;
@@ -2385,17 +2376,17 @@ input.chk[type="checkbox"]:checked::after {
   transform: rotate(-5deg);
   padding: 8px;
 }
-#s7 .vytstamp .art {
+#s4 .vytstamp .art {
   height: 92px;
   background: linear-gradient(180deg, #a8bfa0, #728a68);
   position: relative;
   overflow: hidden;
 }
-#s7 .vytstamp .art svg {
+#s4 .vytstamp .art svg {
   width: 100%;
   height: 100%;
 }
-#s7 .vytstamp b {
+#s4 .vytstamp b {
   display: block;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
@@ -2405,7 +2396,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #3c382c;
   margin-top: 6px;
 }
-#s7 .vytstamp i {
+#s4 .vytstamp i {
   display: block;
   text-align: center;
   font-style: normal;
@@ -2414,7 +2405,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 3px;
   color: #6a5a3e;
 }
-#s7 .foot7 {
+#s4 .foot7 {
   position: absolute;
   left: 0;
   right: 0;
@@ -2431,14 +2422,14 @@ input.chk[type="checkbox"]:checked::after {
   color: #d9c793;
   z-index: 5;
 }
-#s7 .fern {
+#s4 .fern {
   position: absolute;
   width: 120px;
   height: 190px;
   opacity: 0.8;
 }
 
-#s8 .screen {
+#s5 .screen {
   width: 1280px;
   height: 880px;
   background: url("img/paper.png") center/cover no-repeat,
@@ -2450,7 +2441,7 @@ input.chk[type="checkbox"]:checked::after {
     );
   background-blend-mode: soft-light;
 }
-#s8 .darkedge {
+#s5 .darkedge {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -2469,7 +2460,7 @@ input.chk[type="checkbox"]:checked::after {
       rgba(18, 28, 16, 0.95) 100%
     );
 }
-#s8 .tab {
+#s5 .tab {
   position: absolute;
   left: 44px;
   top: 24px;
@@ -2484,7 +2475,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #4a3c22;
   text-align: center;
 }
-#s8 h1 {
+#s5 h1 {
   position: absolute;
   left: 64px;
   top: 85px;
@@ -2494,7 +2485,7 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.05;
   color: #2d3a26;
 }
-#s8 .sub {
+#s5 .sub {
   position: absolute;
   left: 66px;
   top: 170px;
@@ -2506,7 +2497,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #8a4a30;
   line-height: 1.6;
 }
-#s8 .intro {
+#s5 .intro {
   position: absolute;
   left: 66px;
   top: 240px;
@@ -2515,7 +2506,7 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.6;
   color: #4a4438;
 }
-#s8 .jpolC1 {
+#s5 .jpolC1 {
   position: absolute;
   left: 66px;
   top: 370px;
@@ -2524,7 +2515,7 @@ input.chk[type="checkbox"]:checked::after {
   transform: rotate(-1deg);
   z-index: 2;
 }
-#s8 .meta8 {
+#s5 .meta8 {
   position: absolute;
   right: 80px;
   top: 10px;
@@ -2536,7 +2527,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 1.4px;
   line-height: 1.5;
 }
-#s8 .rose8 {
+#s5 .rose8 {
   position: absolute;
   right: 44px;
   top: 6px;
@@ -2546,7 +2537,7 @@ input.chk[type="checkbox"]:checked::after {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-#s8 .route8 {
+#s5 .route8 {
   position: absolute;
   left: 470px;
   top: 170px;
@@ -2554,7 +2545,7 @@ input.chk[type="checkbox"]:checked::after {
   bottom: 60px;
   height: 72%;
 }
-#s8 .rline {
+#s5 .rline {
   position: absolute;
   left: 23px;
   top: 4px;
@@ -2563,20 +2554,20 @@ input.chk[type="checkbox"]:checked::after {
   border-left: 2px dashed #6f5e38;
   height: 85%;
 }
-#s8 .rrow {
+#s5 .rrow {
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#s8 .rstop {
+#s5 .rstop {
   position: relative;
   display: flex;
   gap: 22px;
   align-items: flex-start;
 }
-#s8 .rdot {
+#s5 .rdot {
   position: relative;
   z-index: 2;
   flex: 0 0 48px;
@@ -2591,21 +2582,21 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 21px;
   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.32);
 }
-#s8 .rdot i {
+#s5 .rdot i {
   font-size: 19px;
   color: #4a3c22;
 }
-#s8 .rc {
+#s5 .rc {
   padding-top: 4px;
 }
-#s8 .rc b {
+#s5 .rc b {
   display: block;
   font-family: "Cinzel", serif;
   font-weight: 700;
   font-size: 24px;
   color: #2d3a26;
 }
-#s8 .rc span {
+#s5 .rc span {
   display: block;
   font-size: 14px;
   color: #55503f;
@@ -2614,7 +2605,7 @@ input.chk[type="checkbox"]:checked::after {
   max-width: 370px;
 }
 
-#s8 .jpol3col {
+#s5 .jpol3col {
   position: absolute;
   left: 934px;
   top: 115px;
@@ -2623,7 +2614,7 @@ input.chk[type="checkbox"]:checked::after {
   transform: rotate(-1.2deg);
   z-index: 2;
 }
-#s8 .numbers {
+#s5 .numbers {
   position: absolute;
   left: 934px;
   top: 430px;
@@ -2632,14 +2623,14 @@ input.chk[type="checkbox"]:checked::after {
   background: rgba(250, 244, 226, 0.62);
   padding: 26px 20px 20px;
 }
-#s8 .numbers::after {
+#s5 .numbers::after {
   content: "";
   position: absolute;
   inset: 6px;
   border: 1.4px solid #4a3c22;
   pointer-events: none;
 }
-#s8 .numbers h3 {
+#s5 .numbers h3 {
   position: absolute;
   top: -17px;
   left: 50%;
@@ -2648,18 +2639,18 @@ input.chk[type="checkbox"]:checked::after {
   white-space: nowrap;
   z-index: 1;
 }
-#s8 .numbers .grid {
+#s5 .numbers .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px 12px;
   margin-top: 12px;
 }
-#s8 .numbers .n {
+#s5 .numbers .n {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-#s8 .numbers .n svg {
+#s5 .numbers .n svg {
   width: 32px;
   height: 32px;
   flex: 0 0 32px;
@@ -2669,19 +2660,19 @@ input.chk[type="checkbox"]:checked::after {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-#s8 .numbers .n i {
+#s5 .numbers .n i {
   font-size: 27px;
   color: #4a3c22;
   flex: 0 0 32px;
 }
-#s8 .numbers .n b {
+#s5 .numbers .n b {
   font-family: "Cinzel", serif;
   font-weight: 900;
   font-size: 26px;
   color: #2f2a1c;
   line-height: 1;
 }
-#s8 .numbers .n span {
+#s5 .numbers .n span {
   display: block;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
@@ -2690,7 +2681,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #5c4e2e;
   margin-top: 2px;
 }
-#s8 .quote {
+#s5 .quote {
   position: absolute;
   left: 934px;
   top: 650px;
@@ -2704,7 +2695,7 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.5;
   color: #3c382c;
 }
-#s8 .quote::before {
+#s5 .quote::before {
   content: "“";
   position: absolute;
   left: 14px;
@@ -2713,11 +2704,11 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 48px;
   color: #8a7a52;
 }
-#s8 .quote .tape {
+#s5 .quote .tape {
   left: 110px;
   top: -12px;
 }
-#s8 .st1 {
+#s5 .st1 {
   position: absolute;
   right: 70px;
   top: 340px;
@@ -2725,7 +2716,7 @@ input.chk[type="checkbox"]:checked::after {
   height: 110px;
   font-size: 12px;
 }
-#s8 .st2 {
+#s5 .st2 {
   position: absolute;
   right: 24px;
   bottom: 200px;
@@ -2734,7 +2725,7 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 11.5px;
   transform: rotate(8deg);
 }
-#s8 .fern8 {
+#s5 .fern8 {
   position: absolute;
   right: 6px;
   top: 150px;
@@ -2744,7 +2735,7 @@ input.chk[type="checkbox"]:checked::after {
   transform: rotate(-14deg);
 }
 
-#s9 .screen {
+#s6 .screen {
   width: 1280px;
   height: 880px;
   background: url("img/paper.png") center/cover no-repeat,
@@ -2756,7 +2747,7 @@ input.chk[type="checkbox"]:checked::after {
     );
   background-blend-mode: soft-light;
 }
-#s9 .darkedge {
+#s6 .darkedge {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -2775,7 +2766,7 @@ input.chk[type="checkbox"]:checked::after {
       rgba(18, 28, 16, 0.95) 100%
     );
 }
-#s9 .tab {
+#s6 .tab {
   position: absolute;
   left: 48px;
   top: 28px;
@@ -2789,7 +2780,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2px;
   color: #5c4e2e;
 }
-#s9 h1 {
+#s6 h1 {
   position: absolute;
   left: 52px;
   top: 70px;
@@ -2799,7 +2790,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #2d3a26;
   letter-spacing: 2px;
 }
-#s9 .sub {
+#s6 .sub {
   position: absolute;
   left: 56px;
   top: 170px;
@@ -2811,7 +2802,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #8a4a30;
   line-height: 1.7;
 }
-#s9 .intro {
+#s6 .intro {
   position: absolute;
   left: 56px;
   top: 240px;
@@ -2820,7 +2811,7 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.6;
   color: #4a4438;
 }
-#s9 .ct {
+#s6 .ct {
   position: absolute;
   left: 200px;
   bottom: 70px;
@@ -2829,7 +2820,7 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 12px;
   z-index: 10;
 }
-#s9 .meta9 {
+#s6 .meta9 {
   position: absolute;
   right: 140px;
   top: 40px;
@@ -2841,7 +2832,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2px;
   line-height: 1.7;
 }
-#s9 .pg9 {
+#s6 .pg9 {
   position: absolute;
   right: 36px;
   top: 30px;
@@ -2854,46 +2845,46 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 11px;
   letter-spacing: 2px;
 }
-#s9 .pg9 b {
+#s6 .pg9 b {
   display: block;
   font-size: 22px;
 }
 
-#s9 .panel {
+#s6 .panel {
   background: rgba(250, 244, 226, 0.72);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   padding: 16px 20px;
   position: relative;
 }
 
-#s9 .ann9 {
+#s6 .ann9 {
   position: absolute;
   left: 44px;
   top: 350px;
   width: 378px;
 }
-#s9 .ann9 .arow {
+#s6 .ann9 .arow {
   display: flex;
   align-items: baseline;
   gap: 8px;
   padding: 9px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.35);
 }
-#s9 .ann9 .arow b {
+#s6 .ann9 .arow b {
   font-family: "Cinzel", serif;
   font-weight: 700;
   font-size: 18px;
   color: #2d3a26;
   flex: 1;
 }
-#s9 .ann9 .arow i {
+#s6 .ann9 .arow i {
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
   color: #8a7a52;
   letter-spacing: 0.5px;
 }
-#s9 .ann9 .arow span {
+#s6 .ann9 .arow span {
   font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
   color: #6a5a3e;
@@ -2902,23 +2893,23 @@ input.chk[type="checkbox"]:checked::after {
   border-radius: 3px;
 }
 
-#s9 .bd {
+#s6 .bd {
   position: absolute;
   left: 451px;
   top: 280px;
   width: 378px;
 }
-#s9 .bd .mrow {
+#s6 .bd .mrow {
   display: flex;
   gap: 14px;
   align-items: flex-start;
   padding: 9px 0;
   border-bottom: 1px solid rgba(90, 70, 40, 0.3);
 }
-#s9 .bd .mrow:last-child {
+#s6 .bd .mrow:last-child {
   border-bottom: none;
 }
-#s9 .mtag {
+#s6 .mtag {
   background: #2c4a2c;
   color: #ecd79c;
   font-family: "Bebas Neue", sans-serif;
@@ -2929,21 +2920,21 @@ input.chk[type="checkbox"]:checked::after {
   flex: 0 0 auto;
   margin-top: 2px;
 }
-#s9 .bd .nm {
+#s6 .bd .nm {
   display: flex;
   gap: 22px;
   font-size: 18px;
   color: #3c382c;
   line-height: 1.7;
 }
-#s9 .bd .nm b {
+#s6 .bd .nm b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
   color: #6a5a3e;
   font-size: 16px;
   margin-right: 8px;
 }
-#s9 .wish {
+#s6 .wish {
   margin-top: 20px;
   font-family: "Caveat", cursive;
   font-weight: 700;
@@ -2952,27 +2943,27 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.3;
 }
 
-#s9 .hol {
+#s6 .hol {
   position: absolute;
   left: 858px;
   top: 320px;
   width: 378px;
 }
-#s9 .hrow {
+#s6 .hrow {
   display: flex;
   gap: 8px;
   padding: 10px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.4);
 }
-#s9 .hrow:last-child {
+#s6 .hrow:last-child {
   border-bottom: none;
 }
-#s9 .hrow .d {
+#s6 .hrow .d {
   width: 54px;
   flex: 0 0 54px;
   text-align: center;
 }
-#s9 .hrow .d i {
+#s6 .hrow .d i {
   display: block;
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
@@ -2981,32 +2972,32 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 1.6px;
   color: #8a7a52;
 }
-#s9 .hrow .d b {
+#s6 .hrow .d b {
   font-family: "Cinzel", serif;
   font-weight: 900;
   font-size: 25px;
   color: #2f2a1c;
   line-height: 1;
 }
-#s9 .hrow h6 {
+#s6 .hrow h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1.2px;
   color: #2d3a26;
 }
-#s9 .hrow p {
+#s6 .hrow p {
   font-size: 14px;
   color: #55503f;
   line-height: 1.4;
   margin-top: 6px;
 }
-#s9 .hrow .hi {
+#s6 .hrow .hi {
   width: 30px;
   flex: 0 0 30px;
   align-self: center;
 }
-#s9 .hrow .hi svg {
+#s6 .hrow .hi svg {
   width: 28px;
   height: 28px;
   stroke: #4a3c22;
@@ -3015,11 +3006,11 @@ input.chk[type="checkbox"]:checked::after {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-#s9 .hrow .hi i {
+#s6 .hrow .hi i {
   font-size: 24px;
   color: #4a3c22;
 }
-#s9 .quote9 {
+#s6 .quote9 {
   position: absolute;
   left: 650px;
   top: 124px;
@@ -3034,7 +3025,7 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.5;
   color: #3c382c;
 }
-#s9 .quote9::before {
+#s6 .quote9::before {
   content: "\201C";
   position: absolute;
   left: 18px;
@@ -3043,13 +3034,13 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 54px;
   color: #8a7a52;
 }
-#s9 .quote9 .tape {
+#s6 .quote9 .tape {
   left: 50%;
   top: -12px;
   transform: translateX(-50%);
 }
 
-#s9 .ac {
+#s6 .ac {
   position: absolute;
   right: 30px;
   bottom: 55px;
@@ -3060,7 +3051,7 @@ input.chk[type="checkbox"]:checked::after {
   z-index: 6;
 }
 
-#s9 .compass9 {
+#s6 .compass9 {
   position: absolute;
   left: 430px;
   bottom: 90px;
@@ -3070,43 +3061,43 @@ input.chk[type="checkbox"]:checked::after {
   z-index: 8;
 }
 
-#s9 .compass9 img {
+#s6 .compass9 img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   filter: sepia(0.35);
 }
 
-#s9 .pols {
+#s6 .pols {
   position: absolute;
   left: 452px;
   top: 585px;
   width: 360px;
   height: 290px;
 }
-#s9 .pol {
+#s6 .pol {
   position: absolute;
   width: 190px;
   height: 210px;
 }
 
-#s10 .screen {
+#s7 .screen {
   width: 1280px;
   height: 880px;
   background: #e9dcc0;
 }
-#s10 .hero {
+#s7 .hero {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
-#s10 .hero img {
+#s7 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center -50%;
 }
-#s10 .hero .sun {
+#s7 .hero .sun {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -3117,7 +3108,7 @@ input.chk[type="checkbox"]:checked::after {
   );
   mix-blend-mode: overlay;
 }
-#s10 .hero .fade {
+#s7 .hero .fade {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -3128,7 +3119,7 @@ input.chk[type="checkbox"]:checked::after {
     transparent 62%
   );
 }
-#s10 .hero .grain {
+#s7 .hero .grain {
   position: absolute;
   inset: 0;
   background: radial-gradient(
@@ -3137,7 +3128,7 @@ input.chk[type="checkbox"]:checked::after {
     rgba(30, 20, 8, 0.35) 100%
   );
 }
-#s10 .actag {
+#s7 .actag {
   position: absolute;
   left: 44px;
   top: 30px;
@@ -3152,14 +3143,14 @@ input.chk[type="checkbox"]:checked::after {
   color: #5c4e2e;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
-#s10 .clip {
+#s7 .clip {
   position: absolute;
   left: 34px;
   top: 16px;
   width: 34px;
   height: 56px;
 }
-#s10 .meta10 {
+#s7 .meta10 {
   position: absolute;
   left: 0;
   right: 0;
@@ -3172,7 +3163,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2.5px;
   line-height: 1.8;
 }
-#s10 .pg10 {
+#s7 .pg10 {
   position: absolute;
   right: 36px;
   top: 28px;
@@ -3186,18 +3177,18 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-#s10 .pg10 b {
+#s7 .pg10 b {
   display: block;
   font-size: 22px;
 }
-#s10 .title {
+#s7 .title {
   position: absolute;
   left: 0;
   right: 0;
   top: 85px;
   text-align: center;
 }
-#s10 .title .a {
+#s7 .title .a {
   font-family: "Cinzel", serif;
   font-weight: 900;
   font-size: 86px;
@@ -3205,7 +3196,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #26331f;
   text-shadow: 0 2px 10px rgba(240, 230, 200, 0.6);
 }
-#s10 .title .b {
+#s7 .title .b {
   font-family: "Cinzel", serif;
   font-style: italic;
   font-weight: 600;
@@ -3215,7 +3206,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 2px;
   text-shadow: 0 2px 10px rgba(240, 230, 200, 0.5);
 }
-#s10 .div10 {
+#s7 .div10 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3223,12 +3214,12 @@ input.chk[type="checkbox"]:checked::after {
   margin-top: 6px;
   color: #6f5e38;
 }
-#s10 .div10 .t {
+#s7 .div10 .t {
   width: 60px;
   height: 1.6px;
   background: #6f5e38;
 }
-#s10 .lines {
+#s7 .lines {
   position: absolute;
   left: 0;
   right: 0;
@@ -3239,16 +3230,16 @@ input.chk[type="checkbox"]:checked::after {
   color: #33322c;
   text-shadow: 0 1px 6px rgba(240, 230, 200, 0.7);
 }
-#s10 .lines .dots {
+#s7 .lines .dots {
   width: 280px;
   margin: 12px auto;
   border-top: 1.6px dashed rgba(90, 70, 40, 0.5);
 }
-#s10 .lines .thanks {
+#s7 .lines .thanks {
   color: #6d4b1e;
   font-weight: 600;
 }
-#s10 .stj {
+#s7 .stj {
   position: absolute;
   right: 110px;
   top: 170px;
@@ -3259,7 +3250,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #7d6a3f;
   border-color: #7d6a3f;
 }
-#s10 .oto {
+#s7 .oto {
   position: absolute;
   left: 210px;
   bottom: 120px;
@@ -3271,7 +3262,7 @@ input.chk[type="checkbox"]:checked::after {
   border-color: #5c4e2e;
   background: rgba(240, 232, 208, 0.5);
 }
-#s10 .note {
+#s7 .note {
   position: absolute;
   left: 40px;
   top: 250px;
@@ -3286,14 +3277,14 @@ input.chk[type="checkbox"]:checked::after {
   line-height: 1.35;
   color: #4a3c28;
 }
-#s10 .note .tape {
+#s7 .note .tape {
   left: 70px;
   top: -12px;
 }
-#s10 .note svg {
+#s7 .note svg {
   margin-top: 6px;
 }
-#s10 .patch {
+#s7 .patch {
   position: absolute;
   right: 240px;
   bottom: 120px;
@@ -3306,22 +3297,22 @@ input.chk[type="checkbox"]:checked::after {
   align-items: center;
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.5);
 }
-#s10 .patch::after {
+#s7 .patch::after {
   content: "";
   position: absolute;
   inset: 5px;
   border: 1px solid rgba(210, 180, 110, 0.4);
 }
-#s10 .patch .tape {
+#s7 .patch .tape {
   left: 90px;
   top: -13px;
 }
-#s10 .patch svg {
+#s7 .patch svg {
   width: 44px;
   height: 52px;
   flex: 0 0 44px;
 }
-#s10 .patch b {
+#s7 .patch b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -3329,7 +3320,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #ecd79c;
   display: block;
 }
-#s10 .patch i {
+#s7 .patch i {
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
@@ -3337,7 +3328,7 @@ input.chk[type="checkbox"]:checked::after {
   letter-spacing: 4px;
   color: #c2b184;
 }
-#s10 .rose10 {
+#s7 .rose10 {
   position: absolute;
   right: 66px;
   bottom: 300px;
@@ -3346,7 +3337,7 @@ input.chk[type="checkbox"]:checked::after {
   opacity: 0.9;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
 }
-#s10 .foot10 {
+#s7 .foot10 {
   position: absolute;
   left: 0;
   right: 0;

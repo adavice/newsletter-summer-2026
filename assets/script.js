@@ -62,19 +62,28 @@ fitScreens();
 // ---- Scroll-triggered text reveal (same fadeUpIn pattern as .route8/.rstop) ----
 (function () {
     var selectors = [
+        'h1',
+        '.title-welcome',
+        '.title-tothe',
+        '.title-adventure',
+        '.sign-script',
+        '.sign-team',
+        '.await',
+        '.sub',
+        '.intro',
+        '.title',
         '#s1 .toc .item',
         '#s2 .letter-body > *',
-        '#s6 .left .intro',
-        '#s6 .loc',
-        '#s6 .know .k',
-        '#s7 .sched .it',
-        '#s7 .chk7 li',
-        '#s7 .tips .it',
-        '#s8 .rstop',
-        '#s9 .ann9 .arow',
-        '#s9 .bd .mrow',
-        '#s9 .hol .hrow',
-        '#s10 .lines'
+        '#s3 .loc',
+        '#s3 .know .k',
+        '#s4 .sched .it',
+        '#s4 .chk7 li',
+        '#s4 .tips .it',
+        '#s5 .rstop',
+        '#s6 .ann9 .arow',
+        '#s6 .bd .mrow',
+        '#s6 .hol .hrow',
+        '#s7 .lines'
     ];
     var els = document.querySelectorAll(selectors.join(','));
     if (!els.length) return;
