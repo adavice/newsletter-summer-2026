@@ -365,6 +365,122 @@ html.js .screen-wrap {
     transform: translateY(0);
   }
 }
+/* scroll-triggered text reveal (see route8/.rstop for the original pattern) */
+html.reveal-ready .reveal {
+  opacity: 0;
+}
+.reveal.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+
+/* scroll reveal: cover TOC */
+html.reveal-ready #s1 .toc .item {
+  opacity: 0;
+}
+#s1 .toc .item.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+#s1 .toc .item:nth-child(1) { animation-delay: 0.05s; }
+#s1 .toc .item:nth-child(2) { animation-delay: 0.14s; }
+#s1 .toc .item:nth-child(3) { animation-delay: 0.23s; }
+#s1 .toc .item:nth-child(4) { animation-delay: 0.32s; }
+#s1 .toc .item:nth-child(5) { animation-delay: 0.41s; }
+
+/* scroll reveal: welcome letter */
+html.reveal-ready #s2 .letter-body > * {
+  opacity: 0;
+}
+#s2 .letter-body > *.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+#s2 .letter-body > *:nth-child(1) { animation-delay: 0.05s; }
+#s2 .letter-body > *:nth-child(2) { animation-delay: 0.14s; }
+#s2 .letter-body > *:nth-child(3) { animation-delay: 0.23s; }
+#s2 .letter-body > *:nth-child(4) { animation-delay: 0.32s; }
+#s2 .letter-body > *:nth-child(5) { animation-delay: 0.41s; }
+#s2 .letter-body > *:nth-child(6) { animation-delay: 0.5s; }
+#s2 .letter-body > *:nth-child(7) { animation-delay: 0.59s; }
+
+/* scroll reveal: vytachiv intro + know panel */
+html.reveal-ready #s6 .left .intro,
+html.reveal-ready #s6 .loc {
+  opacity: 0;
+}
+#s6 .left .intro.in-view,
+#s6 .loc.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+html.reveal-ready #s6 .know .k {
+  opacity: 0;
+}
+#s6 .know .k.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+#s6 .know .k:nth-child(1) { animation-delay: 0.05s; }
+#s6 .know .k:nth-child(2) { animation-delay: 0.14s; }
+#s6 .know .k:nth-child(3) { animation-delay: 0.23s; }
+#s6 .know .k:nth-child(4) { animation-delay: 0.32s; }
+
+/* scroll reveal: guide schedule + tips */
+html.reveal-ready #s7 .sched .it {
+  opacity: 0;
+}
+#s7 .sched .it.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+#s7 .sched .it:nth-child(1) { animation-delay: 0.05s; }
+#s7 .sched .it:nth-child(2) { animation-delay: 0.12s; }
+#s7 .sched .it:nth-child(3) { animation-delay: 0.19s; }
+#s7 .sched .it:nth-child(4) { animation-delay: 0.26s; }
+#s7 .sched .it:nth-child(5) { animation-delay: 0.33s; }
+#s7 .sched .it:nth-child(6) { animation-delay: 0.4s; }
+#s7 .sched .it:nth-child(7) { animation-delay: 0.47s; }
+#s7 .sched .it:nth-child(8) { animation-delay: 0.54s; }
+html.reveal-ready #s7 .tips .it {
+  opacity: 0;
+}
+#s7 .tips .it.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+#s7 .tips .it:nth-child(1) { animation-delay: 0.05s; }
+#s7 .tips .it:nth-child(2) { animation-delay: 0.14s; }
+#s7 .tips .it:nth-child(3) { animation-delay: 0.23s; }
+#s7 .tips .it:nth-child(4) { animation-delay: 0.32s; }
+#s7 .tips .it:nth-child(5) { animation-delay: 0.41s; }
+
+/* scroll reveal: celebrations columns */
+html.reveal-ready #s9 .ann9 .arow,
+html.reveal-ready #s9 .bd .mrow,
+html.reveal-ready #s9 .hol .hrow {
+  opacity: 0;
+}
+#s9 .ann9 .arow.in-view,
+#s9 .bd .mrow.in-view,
+#s9 .hol .hrow.in-view {
+  animation: fadeUpIn 0.6s ease-out both;
+}
+#s9 .ann9 .arow:nth-child(1) { animation-delay: 0.05s; }
+#s9 .ann9 .arow:nth-child(2) { animation-delay: 0.12s; }
+#s9 .ann9 .arow:nth-child(3) { animation-delay: 0.19s; }
+#s9 .ann9 .arow:nth-child(4) { animation-delay: 0.26s; }
+#s9 .ann9 .arow:nth-child(5) { animation-delay: 0.33s; }
+#s9 .ann9 .arow:nth-child(6) { animation-delay: 0.4s; }
+#s9 .ann9 .arow:nth-child(7) { animation-delay: 0.47s; }
+#s9 .bd .mrow:nth-child(1) { animation-delay: 0.05s; }
+#s9 .bd .mrow:nth-child(2) { animation-delay: 0.14s; }
+#s9 .bd .mrow:nth-child(3) { animation-delay: 0.23s; }
+#s9 .hol .hrow:nth-child(1) { animation-delay: 0.05s; }
+#s9 .hol .hrow:nth-child(2) { animation-delay: 0.14s; }
+#s9 .hol .hrow:nth-child(3) { animation-delay: 0.23s; }
+#s9 .hol .hrow:nth-child(4) { animation-delay: 0.32s; }
+
+/* scroll reveal: finale closing lines */
+html.reveal-ready #s10 .lines {
+  opacity: 0;
+}
+#s10 .lines.in-view {
+  animation: fadeUpIn 0.7s ease-out both;
+}
 .leafdeco,
 .fernimg,
 .realleaf {
@@ -395,7 +511,10 @@ img.rose10 {
 .stampring:nth-of-type(even) {
   animation-delay: -3s;
 }
-#s7 .chk7 li {
+html.reveal-ready #s7 .chk7 li {
+  opacity: 0;
+}
+#s7 .chk7 li.in-view {
   animation: fadeUpIn 0.6s ease-out both;
 }
 #s7 .chk7 li:nth-child(1) {
@@ -419,7 +538,10 @@ img.rose10 {
 #s7 .chk7 li:nth-child(7) {
   animation-delay: 0.47s;
 }
-#s8 .rstop {
+html.reveal-ready #s8 .rstop {
+  opacity: 0;
+}
+#s8 .rstop.in-view {
   animation: fadeUpIn 0.5s ease-out both;
 }
 #s8 .rstop:nth-child(1) {
@@ -1644,6 +1766,28 @@ input.chk[type="checkbox"]:checked::after {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background: url("img/paper.png") center/cover no-repeat,
+    radial-gradient(
+      ellipse at 50% 18%,
+      #f0e2c0 0%,
+      #e6d5ae 45%,
+      #d3bc8c 80%,
+      #b99f6e 100%
+    );
+  background-blend-mode: soft-light;
+}
+#s6 .left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      circle at 12% 88%,
+      rgba(120, 90, 40, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(circle at 90% 8%, rgba(120, 90, 40, 0.22), transparent 26%),
+    radial-gradient(circle at 85% 92%, rgba(110, 80, 35, 0.3), transparent 32%);
 }
 #s6 .left h1 {
   font-family: "Cinzel", serif;
@@ -1926,12 +2070,14 @@ input.chk[type="checkbox"]:checked::after {
 #s7 .screen {
   width: 1280px;
   height: 880px;
-  background: radial-gradient(
-    ellipse at 50% 25%,
-    #f2ead6 0%,
-    #e9dfc4 50%,
-    #d8c9a4 100%
-  );
+  background: url("img/paper.png") center/cover no-repeat,
+    radial-gradient(
+      ellipse at 50% 25%,
+      #f2ead6 0%,
+      #e9dfc4 50%,
+      #d8c9a4 100%
+    );
+  background-blend-mode: soft-light;
 }
 #s7 .darkedge {
   position: absolute;
@@ -2295,12 +2441,14 @@ input.chk[type="checkbox"]:checked::after {
 #s8 .screen {
   width: 1280px;
   height: 880px;
-  background: radial-gradient(
-    ellipse at 45% 25%,
-    #f0e7d0 0%,
-    #e7dcbe 50%,
-    #d5c5a0 100%
-  );
+  background: url("img/paper.png") center/cover no-repeat,
+    radial-gradient(
+      ellipse at 45% 25%,
+      #f0e7d0 0%,
+      #e7dcbe 50%,
+      #d5c5a0 100%
+    );
+  background-blend-mode: soft-light;
 }
 #s8 .darkedge {
   position: absolute;
@@ -2599,12 +2747,14 @@ input.chk[type="checkbox"]:checked::after {
 #s9 .screen {
   width: 1280px;
   height: 880px;
-  background: radial-gradient(
-    ellipse at 50% 25%,
-    #f1e8d2 0%,
-    #e8ddc0 50%,
-    #d6c6a2 100%
-  );
+  background: url("img/paper.png") center/cover no-repeat,
+    radial-gradient(
+      ellipse at 50% 25%,
+      #f1e8d2 0%,
+      #e8ddc0 50%,
+      #d6c6a2 100%
+    );
+  background-blend-mode: soft-light;
 }
 #s9 .darkedge {
   position: absolute;

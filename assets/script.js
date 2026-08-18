@@ -58,3 +58,44 @@ fitScreens();
         }
     });
 })();
+
+// ---- Scroll-triggered text reveal (same fadeUpIn pattern as .route8/.rstop) ----
+(function () {
+    var selectors = [
+        '#s1 .toc .item',
+        '#s2 .letter-body > *',
+        '#s6 .left .intro',
+        '#s6 .loc',
+        '#s6 .know .k',
+        '#s7 .sched .it',
+        '#s7 .chk7 li',
+        '#s7 .tips .it',
+        '#s8 .rstop',
+        '#s9 .ann9 .arow',
+        '#s9 .bd .mrow',
+        '#s9 .hol .hrow',
+        '#s10 .lines'
+    ];
+    var els = document.querySelectorAll(selectors.join(','));
+    if (!els.length) return;
+
+    // only hide-then-reveal if this script actually runs; if it fails to load
+    // (network error, blocked, etc.) content stays visible by default
+    document.documentElement.classList.add('reveal-ready');
+
+    if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    els.forEach(function (el) { io.observe(el); });
+})();
