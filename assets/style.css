@@ -826,11 +826,13 @@ input.chk[type="checkbox"]:checked::after {
   overflow: hidden;
   z-index: 5;
 }
-#s1 .photo img {
+#s1 .photo img,
+#s1 .photo video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 60%;
+  display: block;
 }
 #s1 .photo::after {
   content: "";
