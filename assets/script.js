@@ -115,7 +115,7 @@ fitScreens();
 (function () {
     var video = document.querySelector('#s1 .photo video');
     if (!video) return;
-    var SPEED = 0.01; // 1 = normal speed; lower = slower
+    var SPEED = 0.5; // 1 = normal speed; lower = slower
 
     var setRate = function () { video.playbackRate = SPEED; };
     setRate();
