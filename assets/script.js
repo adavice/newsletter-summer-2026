@@ -111,15 +111,25 @@ fitScreens();
     els.forEach(function (el) { io.observe(el); });
 })();
 
-// ---- Slow down the cover background video ----
+// ---- Video playback speed control ----
+// Each <video> sets its own speed via a data-speed attribute in the HTML
+// (e.g. data-speed="0.4" = 40% of normal speed). Lower the number for a
+// slower, more ambient loop -- useful for short (e.g. 8s) source clips
+// that would otherwise feel too quick. Most browsers accept values down
+// to roughly 0.0625, though very low values may play choppily depending
+// on the browser/device; 0.25-0.5 is usually a safe, smooth range.
 (function () {
-    var video = document.querySelector('#s1 .photo video');
-    if (!video) return;
-    var SPEED = 0.5; // 1 = normal speed; lower = slower
+    var videos = document.querySelectorAll('video[data-speed]');
+    if (!videos.length) return;
 
-    var setRate = function () { video.playbackRate = SPEED; };
-    setRate();
-    // some browsers reset playbackRate around these events, so re-apply
-    video.addEventListener('loadedmetadata', setRate);
-    video.addEventListener('play', setRate);
+    videos.forEach(function (video) {
+        var speed = parseFloat(video.getAttribute('data-speed'));
+        if (!isFinite(speed) || speed <= 0) speed = 1;
+
+        var setRate = function () { video.playbackRate = speed; };
+        setRate();
+        // some browsers reset playbackRate around these events, so re-apply
+        video.addEventListener('loadedmetadata', setRate);
+        video.addEventListener('play', setRate);
+    });
 })();
