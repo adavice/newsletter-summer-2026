@@ -113,7 +113,7 @@ html.js .screen-wrap {
   position: relative;
   clip-path: polygon(2% 0, 98% 4%, 100% 96%, 1% 100%);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
-  font-size: 18px;
+  font-size: 24px;
 }
 .parch {
   background: radial-gradient(
@@ -642,7 +642,7 @@ html.reveal-ready #s5 .rstop {
 .jfoot-r {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 2.2px;
   color: #d9c793;
   white-space: nowrap;
@@ -1250,7 +1250,7 @@ input.chk[type="checkbox"]:checked::after {
       ellipse at 50% 18%,
       #f0e2c0 0%,
       #e6d5ae 45%,
-      #d3bc8c 80%,
+      #fbe4b3 80%,
       #b99f6e 100%
     );
   background-blend-mode: soft-light;
@@ -1772,7 +1772,7 @@ input.chk[type="checkbox"]:checked::after {
       ellipse at 50% 18%,
       #f0e2c0 0%,
       #e6d5ae 45%,
-      #d3bc8c 80%,
+      #fbe4b3 80%,
       #b99f6e 100%
     );
   background-blend-mode: soft-light;
@@ -1936,7 +1936,7 @@ input.chk[type="checkbox"]:checked::after {
   display: grid;
   gap: 8px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1.5fr 1fr 1fr;
+  grid-template-rows: 1.1fr 1fr 1fr;
 }
 #s3 .cell {
   position: relative;
@@ -1986,7 +1986,7 @@ input.chk[type="checkbox"]:checked::after {
 }
 #s3 .cell.know {
   grid-column: span 2;
-  padding: 17px;
+  padding: 24px 20px;
   color: #e6cd92;
   overflow: hidden;
 }
@@ -1997,7 +1997,7 @@ input.chk[type="checkbox"]:checked::after {
   font-size: 24px;
   letter-spacing: 2px;
   color: #ecd79c;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 #s3 .know .row {
   display: grid;
@@ -2007,7 +2007,7 @@ input.chk[type="checkbox"]:checked::after {
 }
 #s3 .know .k {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
 }
 #s3 .know .k svg {
@@ -2027,7 +2027,7 @@ input.chk[type="checkbox"]:checked::after {
 }
 #s3 .know .k p {
   font-size: 17px;
-  line-height: 1.28;
+  line-height: 1.4;
   color: #d9c793;
 }
 #s3 .foot {
@@ -2139,8 +2139,8 @@ input.chk[type="checkbox"]:checked::after {
 }
 #s4 .bpsc {
   position: absolute;
-  left: 850px;
-  top: 56px;
+  left: 810px;
+  top: 32px;
   width: 120px;
   height: 120px;
   font-size: 16px;
@@ -2184,7 +2184,7 @@ input.chk[type="checkbox"]:checked::after {
 #s4 .col2 {
   position: absolute;
   left: 466px;
-  top: 220px;
+  top: 206px;
   width: 340px;
 }
 #s4 .col3 {
@@ -2226,7 +2226,7 @@ input.chk[type="checkbox"]:checked::after {
 #s4 .sched .it {
   display: flex;
   gap: 12px;
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.4);
   align-items: center;
 }
@@ -2241,20 +2241,20 @@ input.chk[type="checkbox"]:checked::after {
   display: block;
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1.5px;
   color: #8a7a52;
 }
 #s4 .sched .when b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
   color: #33322c;
 }
 #s4 .sched h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 1px;
   color: #2d3a26;
 }
@@ -2268,7 +2268,7 @@ input.chk[type="checkbox"]:checked::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7.5px 4px;
+  padding: 9px 4px;
   border-bottom: 1px solid rgba(90, 70, 40, 0.28);
   list-style: none;
 }
@@ -2309,7 +2309,7 @@ input.chk[type="checkbox"]:checked::after {
 #s4 .tips h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 1px;
   color: #2d3a26;
 }
@@ -2366,9 +2366,9 @@ input.chk[type="checkbox"]:checked::after {
   position: absolute;
   left: 392px;
   bottom: 96px;
-  width: 96px;
-  height: 96px;
-  font-size: 12px;
+  width: 120px;
+  height: 120px;
+  font-size: 16px;
   transform: rotate(9deg);
 }
 #s4 .vytstamp {
@@ -2546,7 +2546,7 @@ input.chk[type="checkbox"]:checked::after {
 #s5 .route8 {
   position: absolute;
   left: 470px;
-  top: 30px;
+  top: 25px;
   width: 440px;
   bottom: 60px;
   height: 90%;
@@ -2614,7 +2614,7 @@ input.chk[type="checkbox"]:checked::after {
 #s5 .jpol3col {
   position: absolute;
   left: 934px;
-  top: 115px;
+  top: 103px;
   width: 280px;
   height: 260px;
   transform: rotate(-1.2deg);
@@ -2623,11 +2623,11 @@ input.chk[type="checkbox"]:checked::after {
 #s5 .numbers {
   position: absolute;
   left: 934px;
-  top: 430px;
+  top: 405px;
   width: 280px;
   border: 3px solid #4a3c22;
   background: rgba(250, 244, 226, 0.62);
-  padding: 26px 20px 20px;
+  padding: 26px 16px 20px;
 }
 #s5 .numbers::after {
   content: "";
@@ -2648,12 +2648,12 @@ input.chk[type="checkbox"]:checked::after {
 #s5 .numbers .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px 12px;
+  gap: 20px 12px;
   margin-top: 12px;
 }
 #s5 .numbers .n {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   align-items: center;
 }
 #s5 .numbers .n svg {
@@ -2674,7 +2674,7 @@ input.chk[type="checkbox"]:checked::after {
 #s5 .numbers .n b {
   font-family: "Cinzel", serif;
   font-weight: 900;
-  font-size: 26px;
+  font-size: 32px;
   color: #2f2a1c;
   line-height: 1;
 }
@@ -2682,7 +2682,7 @@ input.chk[type="checkbox"]:checked::after {
   display: block;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 1.1px;
   color: #5c4e2e;
   margin-top: 2px;
@@ -2690,7 +2690,7 @@ input.chk[type="checkbox"]:checked::after {
 #s5 .quote {
   position: absolute;
   left: 934px;
-  top: 650px;
+  top: 660px;
   width: 280px;
   background: #f6efdc;
   padding: 16px 18px 14px 40px;
@@ -2792,18 +2792,18 @@ input.chk[type="checkbox"]:checked::after {
   top: 70px;
   font-family: "Cinzel", serif;
   font-weight: 900;
-  font-size: 56px;
+  font-size: 64px;
   color: #2d3a26;
   letter-spacing: 2px;
 }
 #s6 .sub {
   position: absolute;
   left: 56px;
-  top: 170px;
+  top: 165px;
   width: 420px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 2px;
   color: #8a4a30;
   line-height: 1.7;
@@ -2813,7 +2813,7 @@ input.chk[type="checkbox"]:checked::after {
   left: 56px;
   top: 240px;
   width: 400px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: #4a4438;
 }
@@ -2866,33 +2866,33 @@ input.chk[type="checkbox"]:checked::after {
 #s6 .ann9 {
   position: absolute;
   left: 44px;
-  top: 350px;
+  top: 376px;
   width: 378px;
 }
 #s6 .ann9 .arow {
   display: flex;
   align-items: baseline;
-  gap: 8px;
-  padding: 9px 0;
+  gap: 12px;
+  padding: 6px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.35);
 }
 #s6 .ann9 .arow b {
   font-family: "Cinzel", serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   color: #2d3a26;
   flex: 1;
 }
 #s6 .ann9 .arow i {
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   color: #8a7a52;
   letter-spacing: 0.5px;
 }
 #s6 .ann9 .arow span {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16px;
+  font-size: 22px;
   color: #6a5a3e;
   background: rgba(90, 70, 40, 0.12);
   padding: 3px 8px;
@@ -2902,7 +2902,7 @@ input.chk[type="checkbox"]:checked::after {
 #s6 .bd {
   position: absolute;
   left: 451px;
-  top: 280px;
+  top: 220px;
   width: 378px;
 }
 #s6 .bd .mrow {
@@ -2920,7 +2920,7 @@ input.chk[type="checkbox"]:checked::after {
   color: #ecd79c;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1.6px;
   padding: 4px 11px;
   flex: 0 0 auto;
@@ -2929,7 +2929,7 @@ input.chk[type="checkbox"]:checked::after {
 #s6 .bd .nm {
   display: flex;
   gap: 22px;
-  font-size: 18px;
+  font-size: 22px;
   color: #3c382c;
   line-height: 1.7;
 }
@@ -2937,14 +2937,14 @@ input.chk[type="checkbox"]:checked::after {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
   color: #6a5a3e;
-  font-size: 16px;
+  font-size: 20px;
   margin-right: 8px;
 }
 #s6 .wish {
   margin-top: 20px;
   font-family: "Caveat", cursive;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   color: #5a4a2c;
   line-height: 1.3;
 }
@@ -2952,14 +2952,16 @@ input.chk[type="checkbox"]:checked::after {
 #s6 .hol {
   position: absolute;
   left: 858px;
-  top: 320px;
+  top: 250px;
   width: 378px;
+  z-index: 1;
 }
 #s6 .hrow {
   display: flex;
   gap: 8px;
   padding: 10px 0;
   border-bottom: 1px dashed rgba(90, 70, 40, 0.4);
+  align-items: center;
 }
 #s6 .hrow:last-child {
   border-bottom: none;
@@ -2974,26 +2976,26 @@ input.chk[type="checkbox"]:checked::after {
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 1.6px;
   color: #8a7a52;
 }
 #s6 .hrow .d b {
   font-family: "Cinzel", serif;
   font-weight: 900;
-  font-size: 25px;
+  font-size: 32px;
   color: #2f2a1c;
   line-height: 1;
 }
 #s6 .hrow h6 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: 1.2px;
   color: #2d3a26;
 }
 #s6 .hrow p {
-  font-size: 14px;
+  font-size: 18px;
   color: #55503f;
   line-height: 1.4;
   margin-top: 6px;
@@ -3019,7 +3021,7 @@ input.chk[type="checkbox"]:checked::after {
 #s6 .quote9 {
   position: absolute;
   left: 650px;
-  top: 124px;
+  top: 80px;
   transform: rotate(7deg);
   width: 450px;
   background: #f6efdc;
@@ -3027,7 +3029,7 @@ input.chk[type="checkbox"]:checked::after {
   text-align: center;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   color: #3c382c;
 }
@@ -3077,7 +3079,7 @@ input.chk[type="checkbox"]:checked::after {
 #s6 .pols {
   position: absolute;
   left: 452px;
-  top: 585px;
+  top: 600px;
   width: 360px;
   height: 290px;
 }
@@ -3207,9 +3209,9 @@ input.chk[type="checkbox"]:checked::after {
   font-family: "Cinzel", serif;
   font-style: italic;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 72px;
   color: #6d4b1e;
-  margin-top: 6px;
+  /* margin-top: 6px; */
   letter-spacing: 2px;
   text-shadow: 0 2px 10px rgba(240, 230, 200, 0.5);
 }
@@ -3232,7 +3234,7 @@ input.chk[type="checkbox"]:checked::after {
   right: 0;
   top: 345px;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.75;
   color: #33322c;
   text-shadow: 0 1px 6px rgba(240, 230, 200, 0.7);
@@ -3249,10 +3251,10 @@ input.chk[type="checkbox"]:checked::after {
 #s7 .stj {
   position: absolute;
   right: 110px;
-  top: 170px;
+  top: 200px;
   width: 120px;
   height: 120px;
-  font-size: 12px;
+  font-size: 16px;
   transform: rotate(10deg);
   color: #7d6a3f;
   border-color: #7d6a3f;
@@ -3261,9 +3263,9 @@ input.chk[type="checkbox"]:checked::after {
   position: absolute;
   left: 210px;
   bottom: 120px;
-  width: 110px;
-  height: 110px;
-  font-size: 12px;
+  width: 120px;
+  height: 120px;
+  font-size: 16px;
   transform: rotate(-9deg);
   color: #5c4e2e;
   border-color: #5c4e2e;
@@ -3273,14 +3275,14 @@ input.chk[type="checkbox"]:checked::after {
   position: absolute;
   left: 40px;
   top: 250px;
-  width: 230px;
+  width: 260px;
   background: rgba(246, 239, 220, 0.94);
   padding: 16px 18px;
   transform: rotate(-3deg);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
   font-family: "Caveat", cursive;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.35;
   color: #4a3c28;
 }
@@ -3322,7 +3324,7 @@ input.chk[type="checkbox"]:checked::after {
 #s7 .patch b {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
   letter-spacing: 3px;
   color: #ecd79c;
   display: block;
@@ -3331,7 +3333,7 @@ input.chk[type="checkbox"]:checked::after {
   font-style: normal;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 600;
-  font-size: 12.5px;
+  font-size: 20px;
   letter-spacing: 4px;
   color: #c2b184;
 }
